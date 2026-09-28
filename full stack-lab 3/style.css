@@ -1,0 +1,320 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background: #ffffff;
+    padding: 2rem;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.skills-list span {
+    display: inline-block;
+
+    background-color: #e9ecef;
+
+    padding: 4px 12px;
+    margin-right: 5px;
+
+    border-radius: 15px;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   PROFILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   PROJECT CARDS
+========================================= */
+
+.projects-container {
+    display: flex;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+
+.project-card {
+    flex: 1 1 300px;
+
+    max-width: 350px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.project-card img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter 0.3s ease;
+}
+
+
+.project-card:hover img {
+    filter: grayscale(0%);
+}
+
+
+/* =========================================
+   ACHIEVEMENT CARD
+========================================= */
+
+.achievement-card {
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 2rem;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+}
+
+
+.achievement-card::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 6px;
+    height: 100%;
+
+    background-color: #0d6efd;
+}
+
+.student-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    line-height: 1.7;
+}
+
+.featured-badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    background-color: #ffc107;
+
+    color: #000000;
+
+    font-weight: bold;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-item {
+    flex: 1 1 200px;
+
+    background-color: #ffffff;
+
+    border-left: 4px solid #0d6efd;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.05);
+
+    min-width: 200px;
+}
+
+
+/* =========================================
+   JAVASCRIPT SECTION
+========================================= */
+
+#javascript {
+    background-color: #f8f9fa;
+}
+
+
+.section-heading {
+    margin-bottom: 1.5rem;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 0.5rem;
+}
+
+
+.section-heading p {
+    color: #333;
+}
+
+
+/* IMPORTANT:
+   Separate class from .profile-card
+*/
+
+.js-card {
+    background-color: #ffffff;
+
+    padding: 2rem;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.js-card h3 {
+    margin-bottom: 1rem;
+
+    color: #111111;
+}
+
+
+.js-card p {
+    line-height: 1.6;
+}
+
+
+.output-text {
+    color: #0d6efd;
+
+    font-weight: 500;
+
+    margin-top: 1rem;
+
+    padding: 10px;
+
+    background-color: #f1f5ff;
+
+    border-radius: 6px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .js-card {
+        padding: 1.25rem;
+    }
+
+    .dashboard-item {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+}
+/* Card Container Custom Styles */
+.js-card {
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Individual Dynamic Student Cards */
+.student-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
